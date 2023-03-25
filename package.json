@@ -1,0 +1,23 @@
+{
+  "name": "learn-html",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manthanank/learn-html.git"
+  },
+  "keywords": [
+    "html"
+  ],
+  "author": "Manthan Ank",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manthanank/learn-html/issues"
+  },
+  "homepage": "https://github.com/manthanank/learn-html#readme"
+}
