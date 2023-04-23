@@ -1,4 +1,13 @@
-# 1.1.0 (2023-03-29)
+# [1.2.0](https://github.com/manthanank/learn-html/compare/v1.1.0...v1.2.0) (2023-04-23)
+
+
+### Features
+
+* updated ([3351230](https://github.com/manthanank/learn-html/commit/3351230ca228268a74f780e1579b931c941d82da))
+
+
+
+# [1.1.0](https://github.com/manthanank/learn-html/compare/49686521d915fc982690abdc4ba69f3bd0142674...v1.1.0) (2023-03-29)
 
 
 ### Features
