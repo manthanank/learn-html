@@ -1,5 +1,7 @@
 # HTML
 
+![npm](https://img.shields.io/npm/dw/learn-html)
+
 **HTML** - Stands for Hyper Text Markup Language
 
 HTML is the standard markup language for creating Web pages
