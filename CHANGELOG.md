@@ -1,3 +1,12 @@
+# [1.3.0](https://github.com/manthanank/learn-html/compare/v1.2.0...v1.3.0) (2024-01-01)
+
+
+### Features
+
+* updated ([d7aac76](https://github.com/manthanank/learn-html/commit/d7aac76d6430ab7c237d58a9a3b8f09e3884a362))
+
+
+
 # [1.2.0](https://github.com/manthanank/learn-html/compare/v1.1.0...v1.2.0) (2023-04-23)
 
 
