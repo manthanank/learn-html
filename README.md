@@ -1006,3 +1006,133 @@ A favicon is a small image displayed next to the page title in the browser tab.
 </body>
 </html>
 ```
+
+## Page Title
+
+Defines the title of the document. Every web page should have a page title to describe the meaning of the page. The `<title>` element adds a title to your page.
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML Tutorial</title>
+</head>
+<body>
+
+The content of the document......
+
+</body>
+</html>
+```
+
+The `<title>` element:
+
+- defines a title in the browser toolbar
+- provides a title for the page when it is added to favorites
+- displays a title for the page in search engine-results
+
+## Tables
+
+HTML tables allow web developers to arrange data into rows and columns.
+
+A simple HTML table:
+
+```html
+<table>
+  <tr>
+    <th>Company</th>
+    <th>Contact</th>
+    <th>Country</th>
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Maria Anders</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Centro comercial Moctezuma</td>
+    <td>Francisco Chang</td>
+    <td>Mexico</td>
+  </tr>
+</table>
+```
+
+### Table Cells
+
+Each table cell is defined by a `<td>` and a `</td>` tag.
+
+Each table cell is defined by a `<td>` and a `</td>` tag.
+
+`td` stands for table data.
+
+Everything between `<td>` and `</td>` are the content of the table cell.
+
+```html
+<table>
+  <tr>
+    <td>Emil</td>
+    <td>Tobias</td>
+    <td>Linus</td>
+  </tr>
+</table>
+```
+
+### Table Rows
+
+Each table row starts with a `<tr>` and ends with a `</tr>` tag.
+
+`tr` stands for table row.
+
+```html
+<table>
+  <tr>
+    <td>Emil</td>
+    <td>Tobias</td>
+    <td>Linus</td>
+  </tr>
+  <tr>
+    <td>16</td>
+    <td>14</td>
+    <td>10</td>
+  </tr>
+</table>
+```
+
+### Table Headers
+
+Sometimes you want your cells to be table header cells. In those cases use the `<th>` tag instead of the `<td>` tag:
+
+`th` stands for table header.
+
+```html
+<table>
+  <tr>
+    <th>Person 1</th>
+    <th>Person 2</th>
+    <th>Person 3</th>
+  </tr>
+  <tr>
+    <td>Emil</td>
+    <td>Tobias</td>
+    <td>Linus</td>
+  </tr>
+  <tr>
+    <td>16</td>
+    <td>14</td>
+    <td>10</td>
+  </tr>
+</table>
+```
+
+| Tag | Description |
+|---|---|
+| `<table>` | Defines a table |
+| `<th>` | Defines a header cell in a table |
+| `<tr>` | Defines a row in a table |
+| `<td>` | Defines a cell in a table |
+| `<caption>` | Defines a table caption |
+| `<colgroup>` | Specifies a group of one or more columns in a table for formatting |
+| `<col>` | Specifies column properties for each column within a `<colgroup>` element |
+| `<thead>` | Groups the header content in a table |
+| `<tbody>` | Groups the body content in a table |
+| `<tfoot>` | Groups the footer content in a table |
