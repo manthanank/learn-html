@@ -1,23 +1,41 @@
 {
   "name": "learn-html",
-  "version": "1.0.1",
-  "description": "",
-  "main": "index.js",
+  "version": "2.0.0",
+  "description": "Master Modern HTML5 - Semantic architecture, accessibility (WCAG 2.2 / a11y), responsive multimedia, Web Components, and comprehensive technical guide",
+  "type": "module",
+  "main": "dist/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/manthanank/learn-html.git"
   },
   "keywords": [
-    "html"
+    "html",
+    "html5",
+    "semantics",
+    "accessibility",
+    "a11y",
+    "web-components",
+    "seo"
   ],
-  "author": "Manthan Ank",
-  "license": "ISC",
+  "author": "Manthan Ankolekar",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/manthanank/learn-html/issues"
   },
-  "homepage": "https://github.com/manthanank/learn-html#readme"
+  "homepage": "https://github.com/manthanank/learn-html#readme",
+  "devDependencies": {
+    "@types/jsdom": "^21.1.7",
+    "@types/node": "^22.13.4",
+    "jsdom": "^26.0.0",
+    "tsx": "^4.19.3",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.5"
+  }
 }

@@ -1,3 +1,9 @@
+# [2.0.0](https://github.com/manthanank/learn-html/compare/v1.4.0...v2.0.0) (2026-09-04)
+
+### Features
+
+* add HTML5 application structure with best practices guidelines and comprehensive guide
+
 # [1.4.0](https://github.com/manthanank/learn-html/compare/v1.3.0...v1.4.0) (2024-02-04)
 
 
@@ -40,6 +46,3 @@
 * updated releases yml file ([95cb3e0](https://github.com/manthanank/learn-html/commit/95cb3e0d4e72efd4876881edcd00c7d3e2abfd59))
 * updated releases yml file ([feb05ac](https://github.com/manthanank/learn-html/commit/feb05ac1b96f22292fa4f7a6ffe6f4c9b944b5f3))
 * updated releases yml file ([e099099](https://github.com/manthanank/learn-html/commit/e09909918ec3929db6be4b45e2c90b3c6e186d4d))
-
-
-

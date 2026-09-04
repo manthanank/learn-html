@@ -1,1138 +1,1211 @@
-# HTML
+# Learn HTML5 🌐
 
-![npm](https://img.shields.io/npm/dw/learn-html)
+<div align="center">
 
-**HTML** - Stands for Hyper Text Markup Language
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Docker Image CI](https://github.com/manthanank/learn-html/actions/workflows/docker.yml/badge.svg)](https://github.com/manthanank/learn-html/actions/workflows/docker.yml)
+[![Releases](https://github.com/manthanank/learn-html/actions/workflows/releases.yml/badge.svg)](https://github.com/manthanank/learn-html/actions/workflows/releases.yml)
+[![HTML5 Living Standard](https://img.shields.io/badge/HTML5-WHATWG%20Standard-E34F26.svg?logo=html5)](https://html.spec.whatwg.org/)
+[![Tested with Vitest](https://img.shields.io/badge/Tested%20with-Vitest-yellow.svg?logo=vitest)](https://vitest.dev/)
 
-HTML is the standard markup language for creating Web pages
-HTML describes the structure of a Web page
-HTML consists of a series of elements
-HTML elements tell the browser how to display the content
-HTML elements label pieces of content such as "this is a heading", "this is a paragraph", "this is a link", etc.
+An exhaustive, battle-tested, enterprise-grade curriculum and reference manual for mastering **HTML5**, semantic web architecture, accessibility (WCAG 2.2 / a11y), responsive multimedia, Web Components, and modern browser rendering internals.
 
-**`<!DOCTYPE>` Declaration** - Represents the document type and helps browsers to display web pages correctly.
+[Getting Started](#-getting-started) • [Semantic Landmarks](#-semantic-html5-architecture) • [Forms & Validation](#-forms-inputs--native-validation) • [Accessibility (a11y)](#-accessibility-a11y--wai-aria-mastery) • [Interview Prep](#-html5-interview-questions--answers) • [Cheat Sheet](#-comprehensive-html5-cheat-sheet)
 
-## Elements
+<br/>
 
-An HTML element is defined by a start tag, some content, and an end tag.
-
-```html
-<tagname>Content goes here...</tagname>
-```
-
-## Attributes
-
-**href** - defines a hyper link.
-
-```html
-<a href="https://www.w3schools.com">Visit W3Schools</a>
-```
-
-**src** - used to embed images in the web pages.
-
-```html
-<img src="img.jpg">
-```
-
-**1. Absolute URL** - Links to an external image that is hosted on another website.
-
-```html
-<img src="https://www.w3schools.com/images/img.jpg">
-```
-
-**2. Relative URL** - Links to an image that is hosted within the website.
-
-```html
-<img src="/images/img.jpg">
-```
-
-**width & height** - specify the width and height of the image (in pixels).
-
-```html
-<img src="img.jpg" width="300" height="300">
-```
-
-**alt** - specifies an alternate text for an image, if the image for some reason cannot be displayed.
-
-```html
-<img src="img.jpg" alt="Image of a jacket">
-```
-
-**style** - used to add styles to an element, such as color, font, size, and more.
-
-```html
-<p style="color:red;">This is a red paragraph.</p>
-```
-
-**lang** - used to declare the language of the Web page. And always included inside the `<html>` tag.
-
-```html
-<html lang="en">
-```
-
-**title** - defines some extra information about an element.
-
-```html
-<p title="I'm a tooltip">This is a paragraph.</p>
-```
-
-**Suggestion 1:** Always Use Lowercase Attributes and Always Quote Attribute Values
-
-```html
-<a href="https://www.w3schools.com/html/">Visit our HTML tutorial</a>
-```
-
-**Suggestion 2:** Single or Double Quotes
-
-```html
-<p title='John "ShotGun" Nelson'>
-    or
-<p title="John 'ShotGun' Nelson">
-```
-
-## Heading
-
-HTML headings are titles or subtitles that you want to display on a webpage. There are six headings defined with the `<h1>` to `<h6>` tags.
-
-```html
-<h1>Heading 1</h1>
-<h2>Heading 2</h2>
-<h3>Heading 3</h3>
-<h4>Heading 4</h4>
-<h5>Heading 5</h5>
-<h6>Heading 6</h6>
-```
-
-## Bigger Headings
-
-You can specify the size for any heading with the style attribute, using the CSS `font-size` property
-
-```html
-<h1 style="font-size:60px;">Heading 1</h1>
-```
-
-**Suggestion :** Search engines use the headings to index the structure and content of your web pages.
-
-## Paragrapgh
-
-Defines a paragraph with `<p>` element.
-
-```html
-<p>This is the first paragraph</p>
-```
-
-## Horizontal Rules
-
-Defines a thematic break in an HTML page, and is most often displayed as a horizontal rule with `<hr>` element.
-
-```html
-<p>This is the first paragraph</p>
-<hr>
-<p>This is the second paragraph</p>
-```
-
-## HTML Line Breaks
-
-Defines a line break with `<br>` element.
-
-```html
-<p>This is<br>a paragraph<br>with line breaks.</p>
-```
-
-## Preformatted Text
-
-Defines preformatted text with `<pre>` element.
-
-```html
-<pre>
-  My Bonnie lies over the ocean.
-
-  My Bonnie lies over the sea.
-
-  My Bonnie lies over the ocean.
-
-  Oh, bring back my Bonnie to me.
-</pre>
-```
-
-## Styles
-
-HTML `style` attribute is used to add styles to an element, such as color, font, size, and more.
-
-```html
-<tagname style="property:value">Tag Name</tagname>
-<!--The property is a CSS property. The value is a CSS value.-->
-```
-
-**Background color** -
-
-CSS `background-color` property defines the background color for an HTML element.
-
-```html
-<h1 style="background-color:powderblue;">Headning</h1>
-```
-
-**Text color** -
-
-CSS `color` property defines the text color for an HTML element
-
-```html
-<p style="color:red;">This is a paragraph.</p>
-```
-
-**Fonts** -
-
-CSS `font-family` property defines the font to be used for an HTML element
-
-```html
-<p style="font-family:verdena;">This is a paragraph.</p>
-```
-
-**Text Size** -
-
-CSS `font-size` property defines the text size for an HTML element
-
-```html
-<p style="font-size:100%;">This is a paragraph.</p>
-```
-
-**Text Alignment** -
-
-CSS `text-align` property defines the horizontal text alignment for an HTML element.
-
-```html
-<h1 style="text-align:center;">Heading.</h1>
-```
-
-## Formatting
-
-**Bold** - The HTML `<b>` element defines bold text, without any extra importance.
-
-```html
-<b>This text is bold</b>
-```
-
-**Important** - The HTML `<strong>` element defines text with strong importance. The content inside is typically displayed in bold.
-
-```html
-<strong>This text is important!</strong>
-```
-
-**Italic** - The HTML `<i>` element defines a part of text in an alternate voice or mood. The content inside is typically displayed in italic.
-
-```html
-<i>This text is italic</i>
-```
-
-**Emphasized** - The HTML `<em>` element defines emphasized text. The content inside is typically displayed in italic.
-
-```html
-<em>This text is emphasized</em>
-```
-
-**Marked** - The HTML `<mark>` element defines text that should be marked or highlighted
-
-```html
-<p>Do not forget to buy <mark>milk</mark> today.</p>
-```
-
-**Smaller** - The HTML `<small>` element defines smaller text
-
-```html
-<small>This is some smaller text.</small>
-```
-
-**Deleted** - The HTML `<del>` element defines text that has been deleted from a document. Browsers will usually strike a line through deleted text
-
-```html
-<p>My favorite color is <del>blue</del> black.</p>
-```
-
-**Inserted** - The HTML `<ins>` element defines a text that has been inserted into a document. Browsers will usually underline inserted text
-
-```html
-<p>My favorite color is <del>blue</del> <ins>black</ins>.</p>
-```
-
-**Subscript** - The HTML `<sub>` element defines subscript text. Subscript text appears half a character below the normal line, and is sometimes rendered in a smaller font. Subscript text can be used for chemical formulas, like H2O.
-
-```html
-<p>This is <sub>subscripted</sub> text.</p>
-```
-
-**Superscript** - The HTML `<sup>` element defines superscript text. Superscript text appears half a character above the normal line, and is sometimes rendered in a smaller font. Superscript text can be used for footnotes, like WWW[1].
-
-```html
-<p>This is <sup>superscripted</sup> text.</p>
-```
-
-## Comments
-
-HTML comments are not displayed in the browser, but they can help document your HTML source code.
-
-```html
-<!-- Write your comments here -->
-```
-
-**Hide Content** - Comments can be used to hide content.
-
-```html
-<p>This is a paragraph.</p>
-
-<!-- <p>This is another paragraph </p> -->
-
-<p>This is a paragraph too.</p>
-```
-
-**Hide Inline Content** - Comments can be used to hide parts in the middle of the HTML code.
-
-```html
-<p>This <!-- great text --> is a paragraph.</p>
-```
-
-## Colors
-
-HTML colors are specified with predefined color names, or with RGB, HEX, HSL, RGBA, or HSLA values.
-
-**Background color** - You can set the background color for HTML elements
-
-```html
-<h1 style="background-color:DodgerBlue;">Hello World</h1>
-<p style="background-color:Tomato;">Lorem ipsum...</p>
-```
-
-**Text color** - You can set the color of text
-
-```html
-<h1 style="color:Tomato;">Hello World</h1>
-<p style="color:DodgerBlue;">Lorem ipsum...</p>
-<p style="color:MediumSeaGreen;">Ut wisi enim...</p>
-```
-
-**Border color** - You can set the color of borders
-
-```html
-<h1 style="border:2px solid Tomato;">Hello World</h1>
-<h1 style="border:2px solid DodgerBlue;">Hello World</h1>
-<h1 style="border:2px solid Violet;">Hello World</h1>
-```
-
-## Color Values
-
-In HTML, colors can also be specified using RGB values, HEX values, HSL values, RGBA values, and HSLA values.
-
-The following three `<div>` elements have their background color set with RGB, HEX, and HSL values
-
-```html
-<h1 style="background-color:rgb(255, 99, 71);">...</h1>
-<h1 style="background-color:#ff6347;">...</h1>
-<h1 style="background-color:hsl(9, 100%, 64%);">...</h1>
-
-<h1 style="background-color:rgba(255, 99, 71, 0.5);">...</h1>
-<h1 style="background-color:hsla(9, 100%, 64%, 0.5);">...</h1>
-```
-
-**RGB** - An RGB color value represents RED, GREEN, and BLUE light sources.
-
-An RGBA color value is an extension of RGB with an Alpha channel (opacity).
-
-In HTML, a color can be specified as an RGB value, using this formula:
-
-rgb(red, green, blue)
-
-```html
-rgb(255, 99, 71)
-```
-
-**HEX** - In HTML, a color can be specified using a hexadecimal value in the form:
-
-`#rrggbb`
-
-```html
-#ff6347
-```
-
-**HSL** - In HTML, a color can be specified using hue, saturation, and lightness (HSL) in the form:
-
-hsl(hue, saturation, lightness)
-
-```html
-hsl(0, 100%, 50%)
-```
-
-**RGBA** - RGBA color values are an extension of RGB color values with an Alpha channel - which specifies the opacity for a color.
-
-An RGBA color value is specified with:
-
-rgba(red, green, blue, alpha)
-
-```html
-rgba(255, 99, 71, 0.5)
-```
-
-**HSLA** - HSLA color values are an extension of HSL color values, with an Alpha channel - which specifies the opacity for a color.
-
-An HSLA color value is specified with:
-
-hsla(hue, saturation, lightness, alpha)
-
-```html
-hsla(0, 100%, 50%, 0.5)
-```
-
-## Quotations
-
-**Blockquotations** - The HTML `<blockquote>` element defines a section that is quoted from another source.
-
-```html
-<p>Here is a quote from WWF's website:</p>
-<blockquote cite="http://www.worldwildlife.org/who/index.html">
-For 60 years, WWF has worked to help people and nature thrive. As the world's leading conservation organization, WWF works in nearly 100 countries. At every level, we collaborate with people around the world to develop and deliver innovative solutions that protect communities, wildlife, and the places in which they live.
-</blockquote>
-```
-
-Short Quotations - The HTML `<q>` tag defines a short quotation.
-
-```html
-<p>WWF's goal is to: <q>Build a future where people live in harmony with nature.</q></p>
-```
-
-Abbreviations - The HTML `<abbr>` tag defines an abbreviation or an acronym, like "HTML", "CSS", "Mr.", "Dr.", "ASAP", "ATM".
-
-```html
-<p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
-```
-
-Address - The HTML `<address>` tag defines the contact information for the author/owner of a document or an article.
-
-```html
-<address>
-Written by John Doe.<br>
-Visit us at:<br>
-Example.com<br>
-Box 564, Disneyland<br>
-USA
-</address>
-```
-
-Work Title - The HTML `<cite>` tag defines the title of a creative work (e.g. a book, a poem, a song, a movie, a painting, a sculpture, etc.).
-
-```html
-<p><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</p>
-```
-
-Bidirectional Overrides - BDO stands for Bi-Directional Override. The HTML `<bdo>` tag is used to override the current text direction.
-
-```html
-<bdo dir="rtl">This text will be written from right to left</bdo>
-```
-
-## HTML CSS
-
-`CSS` saves a lot of work. It can control the layout of multiple web pages all at once.
-
-`What is CSS?`
-
-Ans: Cascading Style Sheets (CSS) is used to format the layout of a webpage.
-
-With CSS, you can control the color, font, the size of text, the spacing between elements, how elements are positioned and laid out, what background images or background colors are to be used, different displays for different devices and screen sizes, and much more!
-
-## Using CSS
-
-CSS can be added to HTML documents in 3 ways:
-
-- Inline - by using the style attribute inside HTML elements
-- Internal - by using a `<style>` element in the `<head>` section
-- External - by using a `<link>` element to link to an external CSS file
-
-### Inline CSS
-
-An inline CSS is used to apply a unique style to a single HTML element.
-
-An inline CSS uses the style attribute of an HTML element.
-
-The following example sets the text color of the `<h1>` element to blue, and the text color of the `<p>` element to red:
-
-```html
-<h1 style="color:blue;">A Blue Heading</h1>
-
-<p style="color:red;">A red paragraph.</p>
-```
-
-### Internal CSS
-
-An internal CSS is used to define a style for a single HTML page.
-
-An internal CSS is defined in the `<head>` section of an HTML page, within a `<style>` element.
-
-The following example sets the text color of ALL the `<h1>` elements (on that page) to blue, and the text color of ALL the `<p>` elements to red. In addition, the page will be displayed with a "powderblue" background color:
-
-```html
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-body {background-color: powderblue;}
-h1   {color: blue;}
-p    {color: red;}
-</style>
-</head>
-<body>
-
-<h1>This is a heading</h1>
-<p>This is a paragraph.</p>
-
-</body>
-</html>
-```
-
-### External CSS
-
-An external style sheet is used to define the style for many HTML pages.
-
-To use an external style sheet, add a link to it in the `<head>` section of each HTML page:
-
-```html
-<!DOCTYPE html>
-<html>
-<head>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-
-<h1>This is a heading</h1>
-<p>This is a paragraph.</p>
-
-</body>
-</html>
-```
-
-The external style sheet can be written in any text editor. The file must not contain any HTML code, and must be saved with a .css extension.
-
-Here is what the "styles.css" file looks like:
-
-"styles.css":
-
-```css
-body {
-  background-color: powderblue;
-}
-h1 {
-  color: blue;
-}
-p {
-  color: red;
-}
-```
-
-## CSS Colors, Fonts and Sizes
-
-Here, we will demonstrate some commonly used CSS properties. You will learn more about them later.
-
-The CSS `color` property defines the text color to be used.
-
-The CSS `font-family` property defines the font to be used.
-
-The CSS `font-size` property defines the text size to be used.
-
-```htm
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-h1 {
-  color: blue;
-  font-family: verdana;
-  font-size: 300%;
-}
-p {
-  color: red;
-  font-family: courier;
-  font-size: 160%;
-}
-</style>
-</head>
-<body>
-
-<h1>This is a heading</h1>
-<p>This is a paragraph.</p>
-
-</body>
-</html>
-```
-
-## CSS Border
-
-The CSS border property defines a border around an HTML element.
-
-Tip: You can define a border for nearly all HTML elements.
-
-```css
-p {
-  border: 2px solid powderblue;
-}
-```
-
-## CSS Padding
-
-The CSS padding property defines a padding (space) between the text and the border.
-
-```css
-p {
-  border: 2px solid powderblue;
-  padding: 30px;
-}
-```
-
-## CSS Margin
-
-The CSS margin property defines a margin (space) outside the border.
-
-```css
-p {
-  border: 2px solid powderblue;
-  margin: 50px;
-}
-```
-
-## Link to External CSS
-
-External style sheets can be referenced with a full URL or with a path relative to the current web page.
-
-This example uses a full URL to link to a style sheet:
-
-```html
-<link rel="stylesheet" href="https://www.w3schools.com/html/styles.css">
-```
-
-This example links to a style sheet located in the html folder on the current web site:
-
-```html
-<link rel="stylesheet" href="/html/styles.css">
-```
-
-This example links to a style sheet located in the same folder as the current page:
-
-```html
-<link rel="stylesheet" href="styles.css">
-```
-
-## Links
-
-HTML links are hyperlinks. The HTML `<a>` tag defines a hyperlink.
-
-```html
-<a>Link</a>
-```
-
-### Target Attributes
-
-**_self** - Default. Opens the document in the same window/tab as it was clicked
-
-```html
-<a _self>Link</a>
-```
-
-**_blank** - Opens the document in a new window or tab
-
-```html
-<a _blank>Link</a>
-```
-
-**_parent** - Opens the document in the parent frame
-
-```html
-<a _parent>Link</a>
-```
-
-**_top** - Opens the document in the full body of the window
-
-```html
-<a _top>Link</a>
-```
-
-## Absolute URL
-
-Links to an external image that is hosted on another website
-
-```html
-<img src="https://www.w3schools.com/images/img.jpg">
-```
-
-## Relative URL
-
-Links to an image that is hosted within the website
-
-```html
-<img src="/images/img.jpg">
-```
-
-## Use an Image as a Link
-
-To use an image as a link, just put the `<img>` tag inside the `<a>` tag:
-
-```html
-<a href="default.asp">
-<img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;">
+<a href="https://www.buymeacoffee.com/manthanank">
+  <img src="public/bmc-button.svg" alt="Buy Me A Coffee" width="180">
 </a>
+
+</div>
+
+---
+
+## 📋 Table of Contents
+
+1. [Introduction & Foundations](#-introduction--foundations)
+   - [What is HTML5? The WHATWG Living Standard](#what-is-html5)
+   - [The Document Object Model (DOM) & Parsing Lifecycle](#the-dom--parsing-lifecycle)
+   - [Critical Rendering Path (DOM + CSSOM -> Render Tree)](#critical-rendering-path)
+2. [Document Anatomy & Modern SEO Metadata](#-document-anatomy--modern-seo-metadata)
+   - [The Standard Document Skeleton (Doctype, html, head, body)](#the-standard-document-skeleton)
+   - [Character Encoding & Viewport Configuration](#character-encoding--viewport)
+   - [OpenGraph & Twitter Card Metadata](#opengraph--twitter-cards)
+   - [Structured Data with JSON-LD](#structured-data-json-ld)
+   - [Favicons, Web App Manifests & PWA Icons](#favicons-and-manifests)
+3. [Getting Started & Project Setup](#-getting-started)
+   - [Project Structure & Architecture](#project-structure)
+   - [Available Scripts & Automated Validation](#available-scripts)
+4. [Semantic HTML5 Architecture](#-semantic-html5-architecture)
+   - [Why Semantics Matter: SEO, Accessibility & Maintainability](#why-semantics-matter)
+   - [The "Div Soup" Antipattern](#the-div-soup-antipattern)
+   - [Structural Landmarks (header, nav, main, article, section, aside, footer)](#structural-landmarks)
+   - [Figures & Media Grouping (figure, figcaption)](#figures-and-captions)
+5. [Text Formatting & Typography Semantics](#-text-formatting--typography-semantics)
+   - [Heading Hierarchy (h1-h6) & Single H1 Rule](#heading-hierarchy)
+   - [Paragraphs & Thematic Breaks (p, hr)](#paragraphs--thematic-breaks)
+   - [Inline Semantics (strong vs b, em vs i, mark, time)](#inline-semantics)
+   - [Code & Technical Content (pre, code, kbd, samp)](#code-and-technical-content)
+   - [Quotes & Citations (blockquote, q, cite)](#quotes-and-citations)
+6. [Hyperlinks & Navigation](#-hyperlinks--navigation)
+   - [The Anchor Element (a, href)](#anchor-element)
+   - [Target Attributes & Security (rel="noopener noreferrer")](#target-attributes--security)
+   - [URL Schemes (mailto:, tel:, sms:)](#url-schemes)
+   - [In-Page Fragment Anchors & Skip Links](#in-page-fragment-anchors)
+7. [Responsive Multimedia & Graphics](#-responsive-multimedia--graphics)
+   - [Images Done Right (img, alt, loading="lazy", decoding="async")](#images-done-right)
+   - [Adaptive Art Direction with picture, srcset, and sizes](#adaptive-art-direction)
+   - [Native Video & Audio (video, audio, track)](#native-video--audio)
+   - [Vector Graphics: Inline SVG vs External SVG](#vector-graphics-svg)
+   - [Interactive Canvas (canvas)](#interactive-canvas)
+   - [Sandboxed Iframes (iframe, sandbox, allow)](#sandboxed-iframes)
+8. [Forms, Inputs & Native Validation](#-forms-inputs--native-validation)
+   - [Form Structure & Attributes (action, method, enctype)](#form-structure)
+   - [Accessible Form Controls (label for, fieldset, legend)](#accessible-form-controls)
+   - [HTML5 Input Types in Depth (email, tel, url, number, date, range, color)](#input-types)
+   - [Datalists, Selects & Outputs (datalist, select, output)](#datalists-selects-outputs)
+   - [Native Constraint Validation API (required, pattern, min/max)](#native-constraint-validation)
+9. [Data Tables & Tabular Architecture](#-data-tables--tabular-architecture)
+   - [Semantic Table Elements (table, caption, thead, tbody, tfoot)](#semantic-table-elements)
+   - [Header Scopes & Grouping (th scope="col|row", colgroup, col)](#header-scopes)
+   - [Complex Tables with colspan and rowspan](#complex-tables)
+10. [Modern Interactive Elements](#-modern-interactive-elements)
+    - [Native Modal Dialogs (dialog, showModal(), ::backdrop)](#native-modal-dialogs)
+    - [Zero-JS Collapsible Widgets (details, summary)](#details-and-summary)
+    - [The HTML Popover API](#the-html-popover-api)
+11. [Web Components & Templating](#-web-components--templating)
+    - [Client-Side Templates (template, slot)](#client-side-templates)
+    - [Custom Elements Lifecycle](#custom-elements-lifecycle)
+    - [Shadow DOM Encapsulation](#shadow-dom-encapsulation)
+12. [Accessibility (a11y) & WAI-ARIA Mastery](#-accessibility-a11y--wai-aria-mastery)
+    - [WCAG 2.2 Standards & POUR Principles](#wcag-standards)
+    - [The First Rule of ARIA](#first-rule-of-aria)
+    - [Essential ARIA Attributes (role, aria-label, aria-expanded, aria-live)](#essential-aria-attributes)
+    - [Keyboard Navigation & Focus Management](#keyboard-navigation)
+13. [Security & Performance Optimization](#-security--performance-optimization)
+    - [Content Security Policy (CSP) Headers & Meta Tags](#content-security-policy)
+    - [Subresource Integrity (SRI: integrity, crossorigin)](#subresource-integrity)
+    - [Script Loading Mechanics (inline, defer, async, type="module")](#script-loading-mechanics)
+    - [Resource Hints (preload, prefetch, preconnect, dns-prefetch)](#resource-hints)
+14. [HTML5 Interview Questions & Answers](#-html5-interview-questions--answers)
+    - [Beginner Questions (1-10)](#beginner-questions)
+    - [Intermediate Questions (11-25)](#intermediate-questions)
+    - [Senior & Architectural Questions (26-40)](#senior--architectural-questions)
+15. [Comprehensive HTML5 Cheat Sheet](#-comprehensive-html5-cheat-sheet)
+    - [All Semantic Elements Reference](#all-semantic-elements-reference)
+    - [Global Attributes & Event Handlers](#global-attributes)
+16. [Community & Contributing](#-community--contributing)
+17. [Author & Sponsorship](#-author--sponsorship)
+
+---
+
+## 🌟 Introduction & Foundations
+
+### What is HTML5?
+
+**HTML (HyperText Markup Language)** is the universal foundational language of the World Wide Web. First conceived by Tim Berners-Lee in 1989, HTML has evolved from a rudimentary text-formatting language into **HTML5**, the official **Living Standard** maintained cooperatively by the **WHATWG (Web Hypertext Application Technology Working Group)** comprising browser vendors (Apple, Google, Mozilla, Microsoft).
+
+HTML5 is not merely a syntax upgrade; it is an extensive platform integrating semantic tags, multimedia playback engines, offline client storage, custom element APIs, and accessible document structures.
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                    THE MODERN WEB STACK                     │
+├────────────────────────┬────────────────────────────────────┤
+│ HTML5 (Structure)      │ Semantic Landmarks, Forms, Content │
+├────────────────────────┼────────────────────────────────────┤
+│ CSS3 (Presentation)    │ Layout, Grid, Flexbox, Animation   │
+├────────────────────────┼────────────────────────────────────┤
+│ JavaScript (Behavior)  │ Interactivity, APIs, State, Events │
+└────────────────────────┴────────────────────────────────────┘
 ```
 
-## Link to Email Address
+### The DOM & Parsing Lifecycle
 
-Use mailto: inside the href attribute to create a link that opens the user's email program (to let them send a new email):
+When a browser receives raw HTML bytes from a server over HTTP, it converts those bytes into a visual page through a deterministic parsing pipeline:
 
-```html
-<a href="mailto:manthan.ank46@gmail.com">E-Mail</a>
+```
+[ Raw Network Bytes ]
+        │
+        ▼
+   ┌──────────┐
+   │ Characters│ ── Converted from UTF-8 byte stream
+   └────┬─────┘
+        ▼
+   ┌──────────┐
+   │  Tokens  │ ── Emits StartTag, EndTag, Characters (Tokenization)
+   └────┬─────┘
+        ▼
+   ┌──────────┐
+   │  Nodes   │ ── Created as Object instances with properties
+   └────┬─────┘
+        ▼
+   ┌──────────┐
+   │   DOM    │ ── Document Object Model Tree assembled in memory
+   └──────────┘
 ```
 
-## Button as a Link
+### Critical Rendering Path
 
-To use an HTML button as a link, you have to add some JavaScript code.
+The **Critical Rendering Path** represents the sequence of operations the browser undertakes to convert the DOM and CSSOM into actual screen pixels:
 
-JavaScript allows you to specify what happens at certain events, such as a click of a button
+1. **DOM Construction**: The HTML is parsed into the Document Object Model.
+2. **CSSOM Construction**: External stylesheets and `<style>` blocks are parsed into the CSS Object Model.
+3. **Render Tree Construction**: The browser intersects DOM and CSSOM, computing which nodes are visible (`display: none` nodes are discarded).
+4. **Layout (Reflow)**: Calculates the exact geometry, coordinates, and pixel dimensions of every visible box on the screen.
+5. **Paint**: Fills pixels with colors, borders, shadows, and text.
+6. **Compositing**: Flattens multiple layers onto the screen GPU canvas.
+
+---
+
+## 📄 Document Anatomy & Modern SEO Metadata
+
+### The Standard Document Skeleton
 
 ```html
-<button onclick="document.location='default.asp'">HTML Tutorial</button>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enterprise Web Architecture | Acme Corp</title>
+    <meta name="description" content="Production-ready web applications built with modern HTML5 semantics and accessibility." />
+  </head>
+  <body>
+    <!-- Content goes here -->
+  </body>
+</html>
 ```
 
-## Link Titles
+Key Components:
+1. `<!DOCTYPE html>`: Triggers modern **standards mode** in all browsers. Omitting this triggers **quirks mode**, which emulates browser bugs from the 1990s!
+2. `<html lang="en">`: Declares the natural language of the document. Crucial for screen reader pronunciation engines and search engine localization.
+3. `dir="ltr"`: Specifies text directionality (`ltr` for Left-to-Right; `rtl` for Right-to-Left languages like Arabic and Hebrew).
 
-The title attribute specifies extra information about an element. The information is most often shown as a tooltip text when the mouse moves over the element.
+### Modern SEO & Social Graph Metadata
+
+Search engines and social sharing platforms (Slack, LinkedIn, Twitter/X, Discord) inspect the `<head>` of your HTML to generate rich link preview cards:
 
 ```html
-<a title="Title">Link Title</a>
+<!-- Canonical URL: Prevents duplicate content penalties -->
+<link rel="canonical" href="https://example.com/learn-html" />
+
+<!-- OpenGraph Metadata (Facebook, LinkedIn, Discord, Slack) -->
+<meta property="og:site_name" content="Learn Web Architecture" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Mastering Modern HTML5 Architecture" />
+<meta property="og:description" content="Exhaustive guide to HTML5 semantics, accessibility, and modern web standards." />
+<meta property="og:url" content="https://example.com/learn-html" />
+<meta property="og:image" content="https://example.com/assets/og-preview.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+
+<!-- Twitter / X Card Metadata -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@manthanank" />
+<meta name="twitter:creator" content="@manthanank" />
+<meta name="twitter:title" content="Mastering Modern HTML5 Architecture" />
+<meta name="twitter:description" content="Exhaustive guide to HTML5 semantics, accessibility, and modern web standards." />
+<meta name="twitter:image" content="https://example.com/assets/og-preview.png" />
+
+<!-- Robots Indexing Directives -->
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
 ```
 
-## HTML Link Colors
+### Structured Data with JSON-LD
 
-By default, a link will appear like this (in all browsers):
-
-- An unvisited link is underlined and blue
-- A visited link is underlined and purple
-- An active link is underlined and red
+Embedding **JSON-LD (JavaScript Object Notation for Linked Data)** provides search engines like Google with rich machine-readable context, unlocking rich snippets in search results:
 
 ```html
-<style>
-a:link {
-  color: green;
-  background-color: transparent;
-  text-decoration: none;
-}
-
-a:visited {
-  color: pink;
-  background-color: transparent;
-  text-decoration: none;
-}
-
-a:hover {
-  color: red;
-  background-color: transparent;
-  text-decoration: underline;
-}
-
-a:active {
-  color: yellow;
-  background-color: transparent;
-  text-decoration: underline;
-}
-</style>
-
-<a href="html_images.asp" target="_blank">HTML Images</a> 
-```
-
-## Create Bookmarks
-
-Bookmarks can be useful if a web page is very long.
-
-To create a bookmark - first create the bookmark, then add a link to it.
-
-When the link is clicked, the page will scroll down or up to the location with the bookmark.
-
-```html
-<h1 id="id">Link</h1>
-
-<a href="#id">Link</a>
-```
-
-## Add Favicon
-
-```html
-<a>Link</a>
-```
-
-## Images
-
-```html
-<img src="" alt="">
-```
-
-**Src** - Specifies the path to the image
-
-The required src attribute specifies the path (URL) to the image.
-
-```html
-<img src="img_chania.jpg" alt="Flowers in Chania">
-```
-
-**Alt** - Specifies an alternate text for the image
-
-The required alt attribute provides an alternate text for an image, if the user for some reason cannot view it.
-
-```html
-<img src="img_chania.jpg" alt="Flowers in Chania">
-```
-
-**Image Size - Width and Height** -
-
-You can use the style attribute to specify the width and height of an image.
-
-```html
-<img src="img_girl.jpg" alt="Girl in a jacket" style="width:500px;height:600px;">
-```
-
-Alternatively, you can use the width and height attributes:
-
-```html
-<img src="img_girl.jpg" alt="Girl in a jacket" width="500" height="600">
-```
-
-## Image Map
-
-The HTML `<map>` tag defines an image map. An image map is an image with clickable areas. The areas are defined with one or more `<area>` tags.
-
-```html
-<img src="workplace.jpg" alt="Workplace" usemap="#workmap">
-
-<map name="workmap">
-  <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
-  <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
-  <area shape="circle" coords="337,300,44" alt="Coffee" href="coffee.htm">
-</map>
-```
-
-**The Image** -
-
-The image is inserted using the `<img>` tag. The only difference from other images is that you must add a usemap attribute:
-
-```html
-<img src="workplace.jpg" alt="Workplace" usemap="#workmap">
-```
-
-**Create Image Map** -
-
-Then, add a `<map>` element.
-
-The `<map>` element is used to create an image map, and is linked to the image by using the required name attribute:
-
-```html
-<map name="workmap">
-```
-
-**The Areas** -
-
-Then, add the clickable areas.
-
-A clickable area is defined using an `<area>` element.
-
-**Shape** -
-
-You must define the shape of the clickable area, and you can choose one of these values:
-
-- rect - defines a rectangular region
-- circle - defines a circular region
-- poly - defines a polygonal region
-- default - defines the entire region
-
-You must also define some coordinates to be able to place the clickable area onto the image. 
-
-`Shape="rect"`
-
-The coordinates for shape="rect" come in pairs, one for the x-axis and one for the y-axis.
-
-```html
-<area shape="circle" coords="337, 300, 44" href="coffee.htm">
-```
-
-`Shape="circle"`
-
-To add a circle area, first locate the coordinates of the center of the circle
-
-```html
-<area shape="circle" coords="337, 300, 44" href="coffee.htm">
-```
-
-`Shape="poly"`
-
-The shape="poly" contains several coordinate points, which creates a shape formed with straight lines (a polygon).
-
-This can be used to create any shape.
-
-```html
-<area shape="poly" coords="140,121,181,116,204,160,204,222,191,270,140,329,85,355,58,352,37,322,40,259,103,161,128,147" href="croissant.htm">
-```
-
-**Image Map and JavaScript** -
-
-A clickable area can also trigger a JavaScript function.
-
-Add a click event to the `<area>` element to execute a JavaScript function:
-
-```html
-<map name="workmap">
-  <area shape="circle" coords="337,300,44" href="coffee.htm" onclick="myFunction()">
-</map>
-
-<script>
-function myFunction() {
-  alert("You clicked the coffee cup!");
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Mastering Modern HTML5 Architecture",
+  "author": {
+    "@type": "Person",
+    "name": "Manthan Ankolekar",
+    "url": "https://github.com/manthanank"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Acme Education"
+  },
+  "datePublished": "2026-09-04",
+  "description": "Comprehensive curriculum on HTML5 semantics, accessibility, and standards."
 }
 </script>
 ```
 
-## Picture Element
 
-The HTML `<picture>` element allows you to display different pictures for different devices or screen sizes.
+## 🚀 Getting Started
 
-The HTML `<picture>` element gives web developers more flexibility in specifying image resources.
+### Project Structure & Architecture
 
-The `<picture>` element contains one or more `<source>` elements, each referring to different images through the srcset attribute. This way the browser can choose the image that best fits the current view and/or device.
+```
+learn-html/
+├── .github/                      # CI/CD Workflows and contribution templates
+│   ├── workflows/
+│   │   ├── docker.yml            # Docker container build & publish
+│   │   └── releases.yml          # Semantic versioning & changelog automation
+│   ├── copilot-instructions.md   # AI guidelines for HTML5 standards
+│   └── pull_request_template.md  # PR quality checklist
+├── .vscode/                      # Editor extensions, tasks, launch configs
+├── public/                       # Static public assets (badges, favicons)
+├── src/                          # Application source code
+│   ├── index.html                # Semantic HTML5 showcase page
+│   ├── server.ts                 # Lightweight Node.js preview server
+│   ├── validator.ts              # DOM structure, SEO, and accessibility validator
+│   └── validator.test.ts         # Vitest unit test suite
+├── Dockerfile                    # Container definition
+├── package.json                  # Dependencies & scripts
+├── tsconfig.json                 # TypeScript configuration
+├── CHANGELOG.md                  # Release version history
+├── CODE_OF_CONDUCT.md            # Community code of conduct
+├── CONTRIBUTING.md               # Contribution guidelines
+├── SECURITY.md                   # Security vulnerability reporting
+└── README.md                     # Comprehensive technical documentation
+```
 
-Each `<source>` element has a media attribute that defines when the image is the most suitable.
+### Available Scripts
+
+| Command | Purpose |
+| :--- | :--- |
+| `npm run dev` | Starts development server with live reload via `tsx watch` |
+| `npm run build` | Compiles TypeScript validator and server via `tsc` |
+| `npm start` | Launches production HTTP server serving `index.html` at port 3000 |
+| `npm test` | Runs the Vitest test suite validating HTML semantics and a11y |
+| `npm run test:watch` | Runs Vitest in interactive watch mode |
+
+---
+
+## 🏛️ Semantic HTML5 Architecture
+
+### Why Semantics Matter
+
+**Semantic HTML** means using elements according to their real-world meaning, rather than solely for their visual styling.
+1. **Accessibility (a11y)**: Screen readers create an auditory outline of your page using semantic landmarks (`main`, `nav`, `header`), allowing visually impaired users to jump directly to primary content without reading through 50 links.
+2. **Search Engine Optimization (SEO)**: Search engine crawlers parse your heading hierarchy and distinguish primary articles from peripheral sidebars (`aside`).
+3. **Maintainability & Clean Code**: Clean, readable markup that eliminates "div soup".
+
+### The "Div Soup" Antipattern
+
+```html
+<!-- ❌ THE OLD "DIV SOUP" ANTIPATTERN (Meaningless to browsers and screen readers) -->
+<div id="header">
+  <div class="logo">Acme</div>
+  <div id="menu">
+    <div class="menu-item"><a href="/home">Home</a></div>
+  </div>
+</div>
+<div id="content">
+  <div class="post">
+    <div class="post-title">Blog Title</div>
+    <div class="post-body">Content...</div>
+  </div>
+</div>
+<div id="footer">Copyright 2026</div>
+
+<!-- ✅ THE MODERN SEMANTIC HTML5 ARCHITECTURE -->
+<header>
+  <div class="logo">Acme</div>
+  <nav aria-label="Main Navigation">
+    <ul>
+      <li><a href="/home">Home</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <article>
+    <header>
+      <h1>Blog Title</h1>
+    </header>
+    <p>Content...</p>
+  </article>
+</main>
+<footer>
+  <p>&copy; 2026 Acme Corp</p>
+</footer>
+```
+
+### Structural Landmarks
+
+```
+┌────────────────────────────────────────────────────────┐
+│                        <header>                        │
+│ ┌────────────────────────────────────────────────────┐ │
+│ │                        <nav>                       │ │
+│ └────────────────────────────────────────────────────┘ │
+└────────────────────────────────────────────────────────┘
+┌──────────────────────────────────────────┬─────────────┐
+│                  <main>                  │   <aside>   │
+│ ┌──────────────────────────────────────┐ │             │
+│ │              <article>               │ │             │
+│ │ ┌──────────────────────────────────┐ │ │             │
+│ │ │             <section>            │ │ │             │
+│ │ └──────────────────────────────────┘ │ │             │
+│ └──────────────────────────────────────┘ │ │             │
+└──────────────────────────────────────────┴─────────────┘
+┌────────────────────────────────────────────────────────┐
+│                        <footer>                        │
+└────────────────────────────────────────────────────────┘
+```
+
+1. **`<header>`**: Represents introductory content, branding, headings, or navigational aids. Can appear at document root or inside `<article>` / `<section>`.
+2. **`<nav>`**: Designates major navigational blocks. Not all links belong in `<nav>`—only primary site or section navigation.
+3. **`<main>`**: Represents the primary, dominant content of the document. **There must be only one visible `<main>` per page**, and it must not be a descendant of `<header>`, `<nav>`, `<aside>`, or `<footer>`.
+4. **`<article>`**: Represents an independent, self-contained composition that could be syndicated or redistributed on its own (e.g. blog post, product card, forum message).
+5. **`<section>`**: Represents a standalone thematic grouping of content, typically with its own heading (`<h2>`-`<h6>`).
+6. **`<aside>`**: Represents secondary content tangentially related to the main content (callouts, author bios, related links, sidebars).
+7. **`<footer>`**: Contains metadata, author information, copyright notices, and legal links.
+
+---
+
+## ✍️ Text Formatting & Typography Semantics
+
+### Heading Hierarchy (`<h1>`-`<h6>`)
+
+Headings construct the logical document outline:
+- **Rule of Thumb**: Exactly **one `<h1>` per page** representing the primary topic of the document.
+- **Never skip heading levels**: Moving from `<h2>` directly to `<h4>` breaks accessibility navigation for screen readers.
+
+### Inline Semantics
+
+| Element | Visual Default | Semantic Meaning | Correct Use Case |
+| :--- | :--- | :--- | :--- |
+| `<strong>` | **Bold** | Strong importance or urgency | Warning notices, critical words |
+| `<b>` | **Bold** | Stylistic offset without extra importance | Product names, lead keywords |
+| `<em>` | *Italic* | Stressed emphasis (changes vocal inflection) | "I *really* like this" |
+| `<i>` | *Italic* | Alternate voice, technical term, foreign phrase | Latin names, internal thoughts |
+| `<mark>` | Highlight | Content marked or highlighted for reference | Search result query matches |
+| `<time>` | Normal | Machine-readable date or time | `<time datetime="2026-09-04">Sept 4</time>` |
+| `<small>` | Smaller | Side comments, legal disclaimers, copyrights | Terms of service, copyright notices |
+| `<del>` / `<ins>` | Strikethrough / Underline | Deleted / Inserted edits in text | Editorial revisions, price changes |
+
+### Code & Technical Content
+
+```html
+<!-- Single inline code snippet -->
+Use the <code>npm test</code> command to execute the test suite.
+
+<!-- User keyboard input -->
+Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to terminate the process.
+
+<!-- Computer program output -->
+The console returned <samp>404 Not Found</samp>.
+
+<!-- Preformatted multi-line code block -->
+<pre><code class="language-typescript">
+function greet(name: string): string {
+  return `Hello, ${name}!`;
+}
+</code></pre>
+```
+
+---
+
+## 🔗 Hyperlinks & Navigation
+
+### The Anchor Element (`<a>`)
+
+Hyperlinks are the glue of the Web:
+
+```html
+<!-- External Link with Security Hardening -->
+<a href="https://github.com/manthanank" target="_blank" rel="noopener noreferrer">
+  Visit GitHub Profile
+</a>
+```
+
+> [!IMPORTANT]
+> Whenever using `target="_blank"`, you **must specify `rel="noopener noreferrer"`**.
+> Without `noopener`, the newly opened page gains access to your window's `window.opener` JavaScript object and can silently redirect your users to a malicious phishing page (Reverse Tabnabbing attack).
+
+### Specialized URL Schemes
+
+```html
+<!-- Email link with pre-filled subject and body -->
+<a href="mailto:manthan.ank46@gmail.com?subject=Inquiry&body=Hello%20Manthan,">Send Email</a>
+
+<!-- Direct Telephone dialer -->
+<a href="tel:+1234567890">Call Support</a>
+
+<!-- Direct SMS trigger -->
+<a href="sms:+1234567890?body=Subscribe">Send SMS</a>
+```
+
+### In-Page Fragment Anchors & Skip Links
+
+```html
+<!-- Skip to Main Content Link (Essential for Keyboard Accessibility) -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- Jump to Section -->
+<a href="#section-pricing">Jump to Pricing</a>
+
+<section id="section-pricing">
+  <h2>Pricing Plans</h2>
+</section>
+```
+
+
+## 🖼️ Responsive Multimedia & Graphics
+
+### Images Done Right
+
+Modern web images require optimization for performance, Cumulative Layout Shift (CLS), and accessibility:
+
+```html
+<img
+  src="/images/hero-800w.webp"
+  alt="Engineering team analyzing cloud telemetry charts on a monitor"
+  width="800"
+  height="450"
+  loading="lazy"
+  decoding="async"
+/>
+```
+
+Best Practices:
+1. **Explicit `width` and `height`**: Providing integer dimensions allows the browser to calculate the image's aspect ratio before bytes download, completely eliminating **Cumulative Layout Shift (CLS)**.
+2. **`loading="lazy"`**: Defers loading images below the fold until the user scrolls near them, dramatically cutting initial page payload.
+3. **`decoding="async"`**: Decodes image bytes off the main UI thread, preventing scroll stutter.
+4. **Descriptive `alt`**: Conveys the information and purpose of the image. If an image is purely decorative, use `alt=""` so screen readers ignore it.
+
+### Adaptive Art Direction with `<picture>`, `srcset`, and `sizes`
+
+The `<picture>` element allows serving modern image formats (AVIF, WebP) with automatic fallbacks, or changing image cropping across screen widths:
 
 ```html
 <picture>
-  <source media="(min-width: 650px)" srcset="img_food.jpg">
-  <source media="(min-width: 465px)" srcset="img_car.jpg">
-  <img src="img_girl.jpg">
+  <!-- Serve ultra-efficient AVIF format to browsers that support it -->
+  <source srcset="/images/banner.avif" type="image/avif" />
+  
+  <!-- Fallback to WebP -->
+  <source srcset="/images/banner.webp" type="image/webp" />
+
+  <!-- Mobile Cropped Image for small viewports -->
+  <source media="(max-width: 600px)" srcset="/images/banner-mobile.jpg" />
+
+  <!-- Standard default fallback -->
+  <img
+    src="/images/banner-desktop.jpg"
+    alt="Developer workstation with multiple monitors"
+    width="1200"
+    height="630"
+    loading="lazy"
+  />
 </picture>
 ```
 
-## Background Image
-
-A background image can be specified for almost any HTML element.
-
-**Background Image on a HTML element** -
-
-To add a background image on an HTML element, use the HTML style attribute and the CSS background-image property:
+Resolution Switching with `srcset` and `sizes`:
 
 ```html
-<p style="background-image: url('img_girl.jpg');">
+<img
+  srcset="
+    /images/photo-400.jpg 400w,
+    /images/photo-800.jpg 800w,
+    /images/photo-1200.jpg 1200w
+  "
+  sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 800px"
+  src="/images/photo-800.jpg"
+  alt="Sunset over the ocean"
+/>
 ```
 
-You can also specify the background image in the `<style>` element, in the `<head>` section:
+### Native Video & Audio
+
+HTML5 enables rich multimedia streaming without third-party plugins (Flash):
 
 ```html
-<style>
-p {
-  background-image: url('img_girl.jpg');
+<video controls width="800" height="450" poster="/media/poster.jpg" preload="metadata">
+  <source src="/media/demo.webm" type="video/webm" />
+  <source src="/media/demo.mp4" type="video/mp4" />
+  
+  <!-- Accessible Captions and Subtitles -->
+  <track
+    kind="subtitles"
+    src="/media/subtitles-en.vtt"
+    srclang="en"
+    label="English"
+    default
+  />
+  <track
+    kind="captions"
+    src="/media/captions-en.vtt"
+    srclang="en"
+    label="English Captions"
+  />
+  
+  <p>Your browser does not support HTML5 video. <a href="/media/demo.mp4">Download video</a>.</p>
+</video>
+```
+
+Native Audio:
+
+```html
+<audio controls preload="none">
+  <source src="/audio/podcast-ep1.opus" type="audio/ogg; codecs=opus" />
+  <source src="/audio/podcast-ep1.mp3" type="audio/mpeg" />
+  <p>Your browser does not support native audio. <a href="/audio/podcast-ep1.mp3">Download audio</a>.</p>
+</audio>
+```
+
+### Vector Graphics: Inline SVG vs Canvas
+
+```html
+<!-- Accessible Inline SVG (Crisp on all DPI displays, styleable with CSS) -->
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" role="img" aria-label="Search Icon">
+  <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2" />
+  <line x1="21" y1="21" x2="16.65" y2="16.65" stroke="currentColor" stroke-width="2" />
+</svg>
+
+<!-- High-Performance Scriptable Canvas for 2D/WebGL Rendering -->
+<canvas id="game-canvas" width="800" height="600">
+  Your browser does not support HTML5 Canvas.
+</canvas>
+```
+
+### Sandboxed Iframes
+
+Embedding third-party widgets or applications securely:
+
+```html
+<iframe
+  src="https://trusted-partner.com/widget"
+  title="Interactive Pricing Calculator"
+  width="100%"
+  height="400"
+  loading="lazy"
+  sandbox="allow-scripts allow-same-origin allow-forms"
+  referrerpolicy="no-referrer"
+></iframe>
+```
+
+Security Best Practices for `iframe`:
+- `sandbox`: Restricts the frame’s capabilities (prevents top-navigation, popup creation, and unrestricted script execution).
+- `title`: Mandatory for screen reader accessibility so users know what content the iframe encapsulates.
+
+
+## 📝 Forms, Inputs & Native Validation
+
+### Accessible Form Controls & Structure
+
+Forms collect user input and submit it to a server. To achieve WCAG 2.2 accessibility, every single input **must be programmatically tied to a visible `<label>`**:
+
+```html
+<form action="/api/checkout" method="POST" enctype="application/x-www-form-urlencoded">
+  <!-- Grouping related fields with fieldset and legend -->
+  <fieldset>
+    <legend>Billing Address</legend>
+
+    <!-- Explicit label association via for and id -->
+    <div class="form-group">
+      <label for="billing-name">Full Name <span aria-hidden="true">*</span></label>
+      <input type="text" id="billing-name" name="name" required autocomplete="name" />
+    </div>
+
+    <div class="form-group">
+      <label for="billing-email">Email Address <span aria-hidden="true">*</span></label>
+      <input type="email" id="billing-email" name="email" required autocomplete="email" />
+    </div>
+  </fieldset>
+</form>
+```
+
+### HTML5 Input Types in Depth
+
+HTML5 introduces specialized input types that display optimized virtual keyboards on mobile devices (iOS, Android) and provide client-side validation out of the box:
+
+| Input Type | Mobile Keyboard Triggered | Built-in Browser Validation |
+| :--- | :--- | :--- |
+| `type="email"` | `@` and `.com` shortcuts | Validates against standard email syntax |
+| `type="tel"` | Full numeric phone dialpad | Does not validate format unless paired with `pattern` |
+| `type="url"` | `.com`, `/`, and URL shortcuts | Enforces `http://` or `https://` protocol prefix |
+| `type="number"` | Number pad | Enforces digits, supports `min`, `max`, and `step` |
+| `type="date"` | Native platform date picker | Enforces YYYY-MM-DD ISO format |
+| `type="range"` | Slider control | Selects numeric value within min/max bounds |
+| `type="color"` | Native platform color picker | Emits 7-character hexadecimal string (`#ff5500`) |
+| `type="file"` | File browser dialog | Accepts constraints: `accept="image/png, .pdf"`, `multiple` |
+
+### Specialized Form Helpers: `<datalist>` & `<output>`
+
+#### 1. Autocomplete Search with `<datalist>`
+Combines the flexibility of a text input with the convenience of a dropdown:
+
+```html
+<label for="browser-choice">Choose your primary browser:</label>
+<input list="browsers" id="browser-choice" name="browser" placeholder="Type or select..." />
+
+<datalist id="browsers">
+  <option value="Google Chrome"></option>
+  <option value="Mozilla Firefox"></option>
+  <option value="Apple Safari"></option>
+  <option value="Microsoft Edge"></option>
+  <option value="Brave"></option>
+</datalist>
+```
+
+#### 2. Live Calculation Output with `<output>`
+
+```html
+<form oninput="total.value = parseInt(qty.value) * parseInt(price.value)">
+  <label for="qty">Quantity:</label>
+  <input type="number" id="qty" name="qty" value="2" min="1" />
+
+  <label for="price">Unit Price ($):</label>
+  <input type="number" id="price" name="price" value="25" min="1" />
+
+  <p>Total Cost: $<output name="total" for="qty price">50</output></p>
+</form>
+```
+
+### Native Constraint Validation API
+
+Modern browsers validate forms automatically without requiring heavy JavaScript libraries:
+
+```html
+<form id="signup-form">
+  <!-- Required and length constraints -->
+  <label for="username">Username (3-20 letters):</label>
+  <input
+    type="text"
+    id="username"
+    name="username"
+    required
+    minlength="3"
+    maxlength="20"
+    pattern="^[a-zA-Z0-9_-]+$"
+    title="Username must contain only alphanumeric characters, underscores, or hyphens."
+  />
+
+  <!-- Numeric range constraints -->
+  <label for="age">Age (Must be at least 18):</label>
+  <input type="number" id="age" name="age" required min="18" max="120" />
+
+  <button type="submit">Create Account</button>
+</form>
+```
+
+Styling Validation States with CSS:
+
+```css
+/* Style valid inputs */
+input:valid {
+  border-color: #22c55e;
 }
-</style>
-```
 
-**Background Image on a Page** -
-
-If you want the entire page to have a background image, you must specify the background image on the `<body>` element:
-
-```html
-<style>
-body {
-  background-image: url('img_girl.jpg');
+/* Style invalid inputs only when the user has interacted with them */
+input:user-invalid {
+  border-color: #ef4444;
 }
-</style>
 ```
 
-To avoid the background image from repeating itself, set the `background-repeat` property to `no-repeat`.
+JavaScript Constraint Validation Integration:
+
+```javascript
+const emailInput = document.getElementById('billing-email');
+
+emailInput.addEventListener('input', () => {
+  if (emailInput.validity.typeMismatch) {
+    emailInput.setCustomValidity('Please enter a corporate email address (e.g. name@company.com)');
+  } else {
+    emailInput.setCustomValidity(''); // Reset custom error to mark valid
+  }
+});
+```
+
+
+## 📊 Data Tables & Tabular Architecture
+
+Tables represent structured two-dimensional data. Tables must never be used for page layout:
 
 ```html
-<style>
-body {
-  background-image: url('example_img_girl.jpg');
-  background-repeat: no-repeat;
+<table>
+  <caption>Quarterly Engineering Department Financials</caption>
+  <colgroup>
+    <col class="col-quarter" />
+    <col class="col-revenue" />
+    <col class="col-expenses" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th scope="col">Quarter</th>
+      <th scope="col">Revenue</th>
+      <th scope="col">Operating Expenses</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Q1 2026</th>
+      <td>$1,250,000</td>
+      <td>$820,000</td>
+    </tr>
+    <tr>
+      <th scope="row">Q2 2026</th>
+      <td>$1,420,000</td>
+      <td>$890,000</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th scope="row">Total</th>
+      <td>$2,670,000</td>
+      <td>$1,710,000</td>
+    </tr>
+  </tfoot>
+</table>
+```
+
+Accessibility Rules for Tables:
+1. **`<caption>`**: Mandatory table title read by screen readers to describe the purpose of the data.
+2. **`<th scope="col|row">`**: Explicitly informs assistive technologies whether a header cell labels a column or a row.
+
+---
+
+## ⚡ Modern Interactive Elements
+
+### Native Modal Dialogs (`<dialog>`)
+
+Prior to HTML5, creating accessible modals required hundreds of lines of JavaScript to manage focus trapping, ARIA attributes, and backdrop rendering. HTML5 provides this natively:
+
+```html
+<!-- Trigger Button -->
+<button type="button" onclick="document.getElementById('profile-modal').showModal()">
+  Edit Profile
+</button>
+
+<!-- Native Dialog -->
+<dialog id="profile-modal" aria-labelledby="modal-title">
+  <h2 id="modal-title">Edit User Profile</h2>
+  <p>Update your public account information below:</p>
+
+  <!-- Native Form with method="dialog" closes the modal on submit! -->
+  <form method="dialog">
+    <label for="display-name">Display Name:</label>
+    <input type="text" id="display-name" value="Manthan Ankolekar" />
+
+    <menu>
+      <button type="button" onclick="document.getElementById('profile-modal').close('cancel')">
+        Cancel
+      </button>
+      <button type="submit" value="save">Save Changes</button>
+    </menu>
+  </form>
+</dialog>
+```
+
+Styling the Backdrop with CSS:
+
+```css
+dialog {
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
-</style>
-```
 
-## Background Cover
-
-f you want the background image to cover the entire element, you can set the `background-size` property to `cover`.
-
-Also, to make sure the entire element is always covered, set the `background-attachment` property to `fixed`.
-
-This way, the background image will cover the entire element, with no stretching
-
-```html
-<style>
-body {
-  background-image: url('img_girl.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
+/* Style the native browser backdrop */
+dialog::backdrop {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(4px);
 }
-</style>
 ```
 
-## Background Stretch
+Key Methods:
+- `dialog.showModal()`: Opens as a top-layer modal, creates native backdrop, traps keyboard focus inside, and handles <kbd>ESC</kbd> to close.
+- `dialog.show()`: Opens as a non-modal popup without backdrop or focus trapping.
+- `dialog.close(returnValue)`: Closes the dialog.
 
-If you want the background image to stretch to fit the entire element, you can set the `background-size` property to `100% 100%`.
+### Zero-JS Collapsible Disclosure (`<details>` & `<summary>`)
+
+Create accessible accordions and collapsible FAQs with zero JavaScript:
 
 ```html
-<style>
-body {
-  background-image: url('img_girl.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 100% 100%;
+<details>
+  <summary>What is the return policy?</summary>
+  <p>You can return any undamaged product within 30 days of purchase for a full refund.</p>
+</details>
+
+<!-- Multiple items with exclusive open state (name attribute in modern HTML) -->
+<details name="faq">
+  <summary>How do I reset my password?</summary>
+  <p>Navigate to Settings -> Security -> Reset Password.</p>
+</details>
+<details name="faq">
+  <summary>Where can I download invoices?</summary>
+  <p>Invoices are located in your Billing dashboard.</p>
+</details>
+```
+
+### The HTML Popover API
+
+The Popover API provides native declarative tooltips, menus, and dropdowns without JavaScript:
+
+```html
+<!-- Trigger Button referencing popover ID -->
+<button popovertarget="my-popover">Toggle Notification Menu</button>
+
+<!-- Popover Element -->
+<div id="my-popover" popover>
+  <h3>Notifications</h3>
+  <p>You have 3 unread messages.</p>
+</div>
+```
+
+---
+
+## 🧩 Web Components & Templating
+
+Web Components are a suite of native browser features enabling reusable, encapsulated custom elements:
+
+### 1. Client-Side `<template>` & `<slot>`
+
+Content inside `<template>` is parsed by the browser but **not rendered or executed** until cloned with JavaScript:
+
+```html
+<template id="user-card-template">
+  <style>
+    .card {
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 1rem;
+      background: white;
+    }
+    .name { font-weight: bold; color: #0f172a; }
+  </style>
+  <div class="card">
+    <p class="name"><slot name="username">Default User</slot></p>
+    <p class="role"><slot name="userrole">Guest</slot></p>
+  </div>
+</template>
+```
+
+### 2. Custom Elements & Shadow DOM
+
+```javascript
+class UserCard extends HTMLElement {
+  constructor() {
+    super();
+    // Attach encapsulated Shadow DOM
+    const shadow = this.attachShadow({ mode: 'open' });
+    const template = document.getElementById('user-card-template').content;
+    shadow.appendChild(template.cloneNode(true));
+  }
 }
-</style>
+
+// Register custom HTML tag
+customElements.define('user-card', UserCard);
 ```
 
-## Favicon
-
-A favicon is a small image displayed next to the page title in the browser tab.
+Using the Custom Element in HTML:
 
 ```html
+<user-card>
+  <span slot="username">Manthan Ankolekar</span>
+  <span slot="userrole">Principal Engineer</span>
+</user-card>
+```
+
+
+## ♿ Accessibility (a11y) & WAI-ARIA Mastery
+
+Web accessibility ensures that websites, tools, and technologies are designed so that people with disabilities (visual, auditory, motor, cognitive) can use them.
+
+### WCAG 2.2 Standards & The POUR Principles
+
+1. **Perceivable**: Information and user interface components must be presentable to users in ways they can perceive (e.g. text alternatives for non-text content, transcripts for audio).
+2. **Operable**: Interface components and navigation must be operable via keyboard without requiring a mouse.
+3. **Understandable**: Information and operation of the user interface must be clear, readable, and predictable.
+4. **Robust**: Content must be robust enough to be reliably interpreted by a wide variety of user agents, including assistive technologies.
+
+### The First Rule of ARIA
+
+> **"If you can use a native HTML5 element or attribute with the semantics and behavior you require, then do so rather than repurposing an element and adding ARIA."**
+
+```html
+<!-- ❌ BAD: Div pretending to be a button with ARIA hack -->
+<div role="button" tabindex="0" onclick="submit()" onkeydown="handleKey()">Submit</div>
+
+<!-- ✅ GOOD: Native semantic button with built-in accessibility and keyboard focus! -->
+<button type="button" onclick="submit()">Submit</button>
+```
+
+### Essential ARIA Attributes
+
+| ARIA Attribute | Purpose | Practical Example |
+| :--- | :--- | :--- |
+| `aria-label` | Provides an invisible accessible text label | `<button aria-label="Close dialog">&times;</button>` |
+| `aria-labelledby` | References the ID of another element that acts as its label | `<section aria-labelledby="sec-head">` |
+| `aria-describedby` | References supplementary descriptive or helper text | `<input aria-describedby="pass-rules">` |
+| `aria-expanded` | Tells screen readers if a collapsible menu/accordion is open | `<button aria-expanded="true">Menu</button>` |
+| `aria-hidden` | Hides decorative elements or icons from screen readers | `<svg aria-hidden="true">...</svg>` |
+| `aria-live` | Announces dynamic content updates to screen readers (`polite` vs `assertive`) | `<div aria-live="polite" id="cart-counter">3 items</div>` |
+
+---
+
+## 🔒 Security & Performance Optimization
+
+### Content Security Policy (CSP)
+
+CSP restricts the domains from which scripts, styles, images, and fonts can load, preventing Cross-Site Scripting (XSS) attacks:
+
+```html
+<meta
+  http-equiv="Content-Security-Policy"
+  content="
+    default-src 'self';
+    script-src 'self' 'nonce-rAnd0m123' https://trustedscripts.com;
+    style-src 'self' https://fonts.googleapis.com;
+    font-src 'self' https://fonts.gstatic.com;
+    img-src 'self' data: https://images.unsplash.com;
+    frame-ancestors 'none';
+  "
+/>
+```
+
+### Subresource Integrity (SRI)
+
+When loading third-party scripts or styles from public CDNs, **Subresource Integrity** guarantees that the file has not been maliciously tampered with or modified:
+
+```html
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+  integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+  crossorigin="anonymous"
+/>
+```
+
+### Script Loading Mechanics: `defer` vs `async` vs `type="module"`
+
+How `<script>` tags load affects browser parsing and rendering performance:
+
+```
+HTML Parsing:    ==============================>
+<script>:        =======[Fetch & Exec]========> (Blocks HTML parsing!)
+<script defer>:  ============[Fetch]===========> (Executes after DOM is ready, in order!)
+<script async>:  ======[Fetch]===             > (Executes immediately when fetched, out of order!)
+<script type="module">: Automatically deferred!
+```
+
+```html
+<!-- 1. Default (Render-Blocking): Halts DOM parsing while downloading and running -->
+<script src="script.js"></script>
+
+<!-- 2. Defer: Downloads asynchronously without blocking; executes in order AFTER DOM is built (Best for dependencies) -->
+<script src="bundle.js" defer></script>
+
+<!-- 3. Async: Downloads asynchronously; executes immediately when ready, pauses HTML parsing (Best for analytics) -->
+<script src="analytics.js" async></script>
+
+<!-- 4. Module: ES Module; automatically deferred, scoped strictly, supports import/export -->
+<script type="module" src="main.js"></script>
+```
+
+### Resource Hints & Preloading
+
+Instruct the browser to establish early connections or prioritize critical assets:
+
+```html
+<!-- 1. Preconnect: Warm up DNS, TCP, and TLS handshake to external origin -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+<!-- 2. DNS-Prefetch: Resolve domain IP ahead of time -->
+<link rel="dns-prefetch" href="https://api.example.com" />
+
+<!-- 3. Preload: High-priority download for critical asset needed in current page (hero image, critical font) -->
+<link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/images/hero.webp" as="image" />
+
+<!-- 4. Prefetch: Low-priority background download for assets likely needed on NEXT navigation -->
+<link rel="prefetch" href="/checkout.js" />
+```
+
+
+## 🎯 HTML5 Interview Questions & Answers
+
+### Beginner Questions
+
+#### 1. What does `<!DOCTYPE html>` do?
+It is an instruction to the web browser that the document is written in HTML5. It triggers modern **standards mode** across all browsers and prevents the browser from dropping into **quirks mode** (which emulates legacy bugs from the 1990s).
+
+#### 2. What is the difference between an element and a tag?
+A **tag** is the syntax used to mark the beginning or end of an element (e.g. `<p>` or `</p>`). An **element** consists of the start tag, its attributes, the content inside, and the closing tag (e.g. `<p class="lead">Hello World</p>`).
+
+#### 3. Why is the `alt` attribute mandatory on `<img>` elements?
+The `alt` attribute provides alternative text for users who cannot view images, including screen reader users who rely on the description to understand content, and users on poor network connections where images fail to load. For purely decorative images, `alt=""` must still be provided so assistive devices skip them.
+
+#### 4. What is the difference between `<b>` and `<strong>`?
+- `<b>` styles text in bold for stylistic distinction without imparting any additional importance or urgency.
+- `<strong>` indicates strong importance, seriousness, or urgency, which screen readers announce with emphasized vocal inflection.
+
+#### 5. What is the difference between `<i>` and `<em>`?
+- `<i>` formats text in italics for alternate voice or mood (technical terms, foreign phrases, thoughts).
+- `<em>` indicates stressed emphasis, which alters the grammatical meaning of the sentence when spoken aloud.
+
+#### 6. What are void (self-closing) elements in HTML5?
+Elements that cannot contain child nodes or closing tags. Examples include `<img>`, `<input>`, `<br>`, `<hr>`, `<meta>`, and `<link>`. In HTML5, trailing slashes like `<img />` are optional.
+
+#### 7. How do you open a link in a new browser tab safely?
+Using `target="_blank"` paired strictly with `rel="noopener noreferrer"`:
+```html
+<a href="https://example.com" target="_blank" rel="noopener noreferrer">Visit Site</a>
+```
+
+#### 8. What is the purpose of `<meta name="viewport" content="width=device-width, initial-scale=1.0">`?
+It instructs mobile browsers to render the page at the device's actual screen width (1:1 scale) rather than rendering a scaled-down 980px desktop viewport.
+
+#### 9. What are the primary structural semantic tags in HTML5?
+`<header>`, `<nav>`, `<main>`, `<article>`, `<section>`, `<aside>`, and `<footer>`.
+
+#### 10. How do you create an HTML comment?
+Using `<!-- This is a comment -->`. Comments are visible in page source inspection but not rendered to the screen.
+
+---
+
+### Intermediate Questions
+
+#### 11. What is the difference between `<section>` and `<article>`?
+- `<article>` represents a self-contained, independent piece of composition that can be syndicated or reused standalone (blog post, news story, comment card).
+- `<section>` represents a thematic grouping of content, typically with a heading, that forms part of a larger document.
+
+#### 12. Explain the difference between `script`, `script defer`, and `script async`.
+- `<script>`: Pauses HTML parsing, fetches the script, executes it immediately, and then resumes HTML parsing.
+- `<script defer>`: Fetches the script asynchronously in parallel with HTML parsing. Executes only after the HTML document has finished parsing, in exact document order.
+- `<script async>`: Fetches the script asynchronously in parallel, but executes immediately as soon as it downloads, pausing HTML parsing and executing out of order.
+
+#### 13. What is the purpose of the `<picture>` element compared to `<img>` with `srcset`?
+- `srcset` with `sizes` provides resolution switching (serving different resolutions of the exact same image depending on screen density).
+- `<picture>` enables **art direction** (serving completely different image crops or modern formats like AVIF/WebP based on media queries or browser format support).
+
+#### 14. What are data attributes (`data-*`)?
+Custom attributes prefixed with `data-` (e.g. `data-user-id="101"`) that store custom private data on elements without affecting presentation. They are accessible in JavaScript via the `element.dataset` object.
+
+#### 15. How does the native `<dialog>` element work?
+`<dialog>` provides a native browser modal. When opened with `dialog.showModal()`, it automatically renders in the browser's top layer with a native `::backdrop`, locks scrolling, and traps keyboard focus inside.
+
+#### 16. What is the difference between `<meter>` and `<progress>`?
+- `<progress>` indicates the completion progress of an ongoing task (e.g., download progress: 45%).
+- `<meter>` represents a scalar measurement within a known range, or a fractional value (e.g., disk usage: 80GB out of 100GB).
+
+#### 17. How does the `<template>` element work?
+Content inside `<template>` is parsed into a DocumentFragment by the browser but **not rendered, evaluated, or loaded** (images don't download, scripts don't run) until instantiated and cloned into the active DOM via JavaScript.
+
+#### 18. What is Subresource Integrity (SRI)?
+A security mechanism allowing browsers to verify that resources fetched from third-party CDNs have not been tampered with. It compares a cryptographic hash of the file with the expected `integrity` attribute value.
+
+#### 19. What is the purpose of `autocomplete` attributes on form inputs?
+Providing specific autocomplete tokens (e.g. `autocomplete="name"`, `autocomplete="cc-number"`, `autocomplete="current-password"`) helps browser password managers and autofill engines populate forms accurately while preventing identity theft.
+
+#### 20. What is the difference between `localStorage`, `sessionStorage`, and Cookies?
+- `localStorage`: Stores 5-10MB of key-value string data with no expiration (persists until manually cleared).
+- `sessionStorage`: Stores 5MB of data scoped to the current browser tab (cleared when the tab is closed).
+- Cookies: Store up to 4KB of data, can be set with expiration dates, and are automatically sent to the server with every HTTP request.
+
+---
+
+### Senior & Architectural Questions
+
+#### 21. Explain the browser Critical Rendering Path and how HTML authoring impacts it.
+The CRP consists of: DOM Construction -> CSSOM Construction -> Render Tree -> Layout -> Paint -> Composite.
+HTML impacts it because:
+1. Unoptimized `<script>` tags block DOM parsing.
+2. Unsized images trigger costly Layout reflows after downloading.
+3. Excessive DOM depth (>32 levels or >1,500 nodes) increases layout calculation time exponentially.
+
+#### 22. What are the Web Components standards and how do they function?
+Web Components comprise three primary native browser standards:
+1. **Custom Elements**: The JavaScript API (`customElements.define`) to define new HTML tags and their lifecycle callbacks (`connectedCallback`, `disconnectedCallback`).
+2. **Shadow DOM**: Private, encapsulated DOM subtree isolated from external CSS and JavaScript selectors.
+3. **HTML Templates**: The `<template>` and `<slot>` elements for declarative markup templates and content projection.
+
+#### 23. What is the First Rule of ARIA and when should ARIA be applied?
+"If you can use a native HTML element with the semantics and behavior you require, do not use ARIA."
+ARIA should only be applied to bridge gaps when native HTML semantics do not exist for a specific complex widget (e.g. `role="tablist"`, `role="combobox"`).
+
+#### 24. What are Layout Shifts (CLS) and how do HTML attributes mitigate them?
+Cumulative Layout Shift (CLS) measures unexpected visual movement of elements during page load. Always specifying `width` and `height` aspect ratio attributes on `<img>`, `<video>`, and `<iframe>` reserves the exact layout box space before the asset downloads, completely eliminating layout jumps.
+
+#### 25. Explain the security implications of `iframe` embedding and how the `sandbox` attribute mitigates them.
+An unhardened `iframe` can execute arbitrary JavaScript, navigate the parent window, read storage, and trigger popups. Adding `sandbox="allow-scripts allow-same-origin"` enforces the principle of least privilege, isolating untrusted third-party code from the host application.
+
+---
+
+## 📑 Comprehensive HTML5 Cheat Sheet
+
+### Common Semantic Tags Reference
+
+```html
+<!-- Document & Head -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My Page Title</title>
-  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Title</title>
 </head>
-<body>
 
-<h1>This is a Heading</h1>
-<p>This is a paragraph.</p>
+<!-- Structure -->
+<header>Header content</header>
+<nav>Navigation links</nav>
+<main>Main document content</main>
+<article>Independent article</article>
+<section>Thematic section</section>
+<aside>Sidebar or secondary content</aside>
+<footer>Footer info</footer>
 
-</body>
-</html>
+<!-- Forms -->
+<form action="/submit" method="POST">
+  <fieldset>
+    <legend>Title</legend>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required autocomplete="email">
+  </fieldset>
+</form>
+
+<!-- Dialog Modal -->
+<dialog id="my-dialog">
+  <p>Modal content</p>
+  <form method="dialog"><button>Close</button></form>
+</dialog>
 ```
 
-## Page Title
+---
 
-Defines the title of the document. Every web page should have a page title to describe the meaning of the page. The `<title>` element adds a title to your page.
+## 🤝 Community & Contributing
 
-```html
-<!DOCTYPE html>
-<html>
-<head>
-  <title>HTML Tutorial</title>
-</head>
-<body>
+Contributions, issues, and feature requests are welcome!
 
-The content of the document......
+1. Fork the Project (`https://github.com/manthanank/learn-html/fork`)
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'feat: add AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-</body>
-</html>
-```
+Please make sure to read the [Contributing Guide](CONTRIBUTING.md) and [Code of Conduct](CODE_OF_CONDUCT.md).
 
-The `<title>` element:
+---
 
-- defines a title in the browser toolbar
-- provides a title for the page when it is added to favorites
-- displays a title for the page in search engine-results
+## 👤 Author & Sponsorship
 
-## Tables
+**Manthan Ankolekar**
 
-HTML tables allow web developers to arrange data into rows and columns.
+- GitHub: [@manthanank](https://github.com/manthanank)
+- Website: [manthanank.github.io](https://manthanank.github.io)
+- LinkedIn: [Manthan Ankolekar](https://www.linkedin.com/in/manthanank/)
 
-A simple HTML table:
+<div align="center">
 
-```html
-<table>
-  <tr>
-    <th>Company</th>
-    <th>Contact</th>
-    <th>Country</th>
-  </tr>
-  <tr>
-    <td>Alfreds Futterkiste</td>
-    <td>Maria Anders</td>
-    <td>Germany</td>
-  </tr>
-  <tr>
-    <td>Centro comercial Moctezuma</td>
-    <td>Francisco Chang</td>
-    <td>Mexico</td>
-  </tr>
-</table>
-```
+If this curriculum or project helped you master HTML5, please consider supporting my work:
 
-### Table Cells
+<a href="https://www.buymeacoffee.com/manthanank">
+  <img src="public/bmc-button.svg" alt="Buy Me A Coffee" width="200">
+</a>
 
-Each table cell is defined by a `<td>` and a `</td>` tag.
+<br/><br/>
 
-Each table cell is defined by a `<td>` and a `</td>` tag.
+⭐ **Star this repository** if you found it valuable!
 
-`td` stands for table data.
-
-Everything between `<td>` and `</td>` are the content of the table cell.
-
-```html
-<table>
-  <tr>
-    <td>Emil</td>
-    <td>Tobias</td>
-    <td>Linus</td>
-  </tr>
-</table>
-```
-
-### Table Rows
-
-Each table row starts with a `<tr>` and ends with a `</tr>` tag.
-
-`tr` stands for table row.
-
-```html
-<table>
-  <tr>
-    <td>Emil</td>
-    <td>Tobias</td>
-    <td>Linus</td>
-  </tr>
-  <tr>
-    <td>16</td>
-    <td>14</td>
-    <td>10</td>
-  </tr>
-</table>
-```
-
-### Table Headers
-
-Sometimes you want your cells to be table header cells. In those cases use the `<th>` tag instead of the `<td>` tag:
-
-`th` stands for table header.
-
-```html
-<table>
-  <tr>
-    <th>Person 1</th>
-    <th>Person 2</th>
-    <th>Person 3</th>
-  </tr>
-  <tr>
-    <td>Emil</td>
-    <td>Tobias</td>
-    <td>Linus</td>
-  </tr>
-  <tr>
-    <td>16</td>
-    <td>14</td>
-    <td>10</td>
-  </tr>
-</table>
-```
-
-| Tag | Description |
-|---|---|
-| `<table>` | Defines a table |
-| `<th>` | Defines a header cell in a table |
-| `<tr>` | Defines a row in a table |
-| `<td>` | Defines a cell in a table |
-| `<caption>` | Defines a table caption |
-| `<colgroup>` | Specifies a group of one or more columns in a table for formatting |
-| `<col>` | Specifies column properties for each column within a `<colgroup>` element |
-| `<thead>` | Groups the header content in a table |
-| `<tbody>` | Groups the body content in a table |
-| `<tfoot>` | Groups the footer content in a table |
+</div>

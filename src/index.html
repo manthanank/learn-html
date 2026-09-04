@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Master Modern HTML5 - Semantic architecture, accessibility (WCAG 2.2), modern forms, multimedia, and Web Components." />
+    <meta name="author" content="Manthan Ankolekar" />
+    <meta property="og:title" content="Learn HTML5 - Modern Semantic & Accessible Architecture" />
+    <meta property="og:description" content="A comprehensive masterclass on HTML5 semantics, accessibility, and modern web standards." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>Learn HTML5 - Modern Web Architecture</title>
+    <link rel="icon" href="/favicon.ico" />
+    <style>
+      :root {
+        --primary: #e44d26;
+        --secondary: #f16529;
+        --dark: #1a1a24;
+        --light: #f8fafc;
+        --text: #334155;
+        --border: #e2e8f0;
+        --radius: 8px;
+      }
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        line-height: 1.6;
+        color: var(--text);
+        background: var(--light);
+        padding: 2rem 1rem;
+      }
+      .container { max-width: 900px; margin: 0 auto; }
+      header, nav, main, article, section, aside, footer {
+        background: #ffffff;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+      header {
+        border-top: 4px solid var(--primary);
+        text-align: center;
+      }
+      h1, h2, h3 { color: var(--dark); margin-bottom: 0.75rem; }
+      nav ul { display: flex; gap: 1rem; list-style: none; flex-wrap: wrap; }
+      nav a { color: var(--primary); text-decoration: none; font-weight: 600; }
+      nav a:hover { text-decoration: underline; }
+      form { display: grid; gap: 1rem; max-width: 500px; }
+      label { font-weight: 600; font-size: 0.9rem; }
+      input, select, textarea, button {
+        padding: 0.6rem 0.8rem;
+        border: 1px solid var(--border);
+        border-radius: 4px;
+        font: inherit;
+      }
+      button {
+        background: var(--primary);
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-weight: 600;
+      }
+      button:hover { background: var(--secondary); }
+      dialog {
+        margin: auto;
+        padding: 2rem;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      }
+      dialog::backdrop { background: rgba(0, 0, 0, 0.4); }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Semantic Landmark: Header -->
+      <header>
+        <h1>Learn Modern HTML5 Architecture</h1>
+        <p>A showcase of semantic landmarks, accessible forms, and native interactive capabilities.</p>
+      </header>
+
+      <!-- Semantic Landmark: Navigation -->
+      <nav aria-label="Main Navigation">
+        <ul>
+          <li><a href="#semantics">Semantics</a></li>
+          <li><a href="#forms">Forms</a></li>
+          <li><a href="#dialog-section">Dialog</a></li>
+          <li><a href="#media">Media</a></li>
+        </ul>
+      </nav>
+
+      <!-- Semantic Landmark: Main Content -->
+      <main id="main-content">
+        <article id="semantics">
+          <header>
+            <h2>1. Semantic Structural Elements</h2>
+            <p><time datetime="2026-09-04">September 4, 2026</time> by Manthan Ankolekar</p>
+          </header>
+          <p>
+            HTML5 replaces generic <code>&lt;div&gt;</code> soups with meaningful tags that inform browsers,
+            search engines, and assistive screen readers about the purpose and hierarchy of content.
+          </p>
+          <section>
+            <h3>Core Landmark Elements</h3>
+            <ul>
+              <li><code>&lt;header&gt;</code>: Introductory content or navigational aids.</li>
+              <li><code>&lt;nav&gt;</code>: Major navigational links.</li>
+              <li><code>&lt;main&gt;</code>: The central, dominant content of the document.</li>
+              <li><code>&lt;article&gt;</code>: Independent, self-contained composition (blog post, news item).</li>
+              <li><code>&lt;section&gt;</code>: Thematic grouping of content with a heading.</li>
+              <li><code>&lt;aside&gt;</code>: Tangentially related sidebars, callouts, or glossaries.</li>
+              <li><code>&lt;footer&gt;</code>: Metadata, copyright, and author contacts.</li>
+            </ul>
+          </section>
+        </article>
+
+        <!-- Accessible Interactive Form -->
+        <section id="forms">
+          <h2>2. Accessible Forms & Native Validation</h2>
+          <form id="contact-form" action="/api/submit" method="POST">
+            <fieldset>
+              <legend>User Registration</legend>
+
+              <label for="full-name">Full Name (Required):</label>
+              <input type="text" id="full-name" name="name" required minlength="2" placeholder="Alex Morgan" />
+
+              <label for="user-email">Email Address (Required):</label>
+              <input type="email" id="user-email" name="email" required placeholder="alex@example.com" />
+
+              <label for="role-select">Developer Role:</label>
+              <select id="role-select" name="role">
+                <option value="frontend">Frontend Architect</option>
+                <option value="backend">Backend Engineer</option>
+                <option value="fullstack">Full Stack Engineer</option>
+              </select>
+
+              <label for="experience-slider">Years of Experience: <output id="exp-output" for="experience-slider">5</output></label>
+              <input type="range" id="experience-slider" name="experience" min="0" max="20" value="5" oninput="document.getElementById('exp-output').value = this.value" />
+
+              <button type="submit">Submit Registration</button>
+            </fieldset>
+          </form>
+        </section>
+
+        <!-- Native Dialog Modal -->
+        <section id="dialog-section">
+          <h2>3. Modern Native Dialog Modal</h2>
+          <p>HTML5 provides a built-in modal dialog with native backdrop and focus trapping:</p>
+          <button type="button" id="open-dialog-btn" onclick="document.getElementById('demo-dialog').showModal()">Open Native Modal</button>
+
+          <dialog id="demo-dialog">
+            <h3>Native HTML5 Dialog</h3>
+            <p>This modal is rendered with built-in accessibility and keyboard ESC closing behavior.</p>
+            <form method="dialog">
+              <button type="submit">Close Dialog</button>
+            </form>
+          </dialog>
+        </section>
+
+        <!-- Responsive Media & Figures -->
+        <section id="media">
+          <h2>4. Responsive Media & Embeds</h2>
+          <figure>
+            <svg width="120" height="40" viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="HTML5 Logo Text">
+              <rect width="120" height="40" rx="6" fill="#e44d26" />
+              <text x="60" y="25" fill="#ffffff" font-size="16" font-family="sans-serif" font-weight="bold" text-anchor="middle">HTML5</text>
+            </svg>
+            <figcaption>Accessible Vector Badge with inline SVG</figcaption>
+          </figure>
+
+          <details>
+            <summary>Click to view native details and summary disclosure</summary>
+            <p>The <code>&lt;details&gt;</code> element creates a disclosure widget requiring zero JavaScript!</p>
+          </details>
+        </section>
+      </main>
+
+      <!-- Semantic Landmark: Aside -->
+      <aside aria-label="Quick Facts">
+        <h3>HTML5 Quick Facts</h3>
+        <p>Published as a W3C Recommendation in October 2014 and maintained as a Living Standard by WHATWG.</p>
+      </aside>
+
+      <!-- Semantic Landmark: Footer -->
+      <footer>
+        <p>&copy; 2026 Manthan Ankolekar. Licensed under the MIT License.</p>
+      </footer>
+    </div>
+  </body>
+</html>
