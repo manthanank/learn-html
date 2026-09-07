@@ -1055,3 +1055,238 @@ Contributions are welcome! Please review our [CONTRIBUTING.md](CONTRIBUTING.md) 
 
 ## 📄 License
 This project is open-source software licensed under the [MIT License](LICENSE).
+
+
+
+### Complete Modern HTML5 & Web Platform Code Examples
+
+#### 1. Native `<dialog>` Element: Accessible Zero-Dependency Modal
+The native `<dialog>` element provides built-in keyboard focus trapping, top-layer rendering, backdrop blur, and ESC-key dismiss handling.
+
+```html
+<!-- Trigger Button -->
+<button id="open-modal-btn" class="btn">Open Profile Settings</button>
+
+<!-- Native Dialog Element -->
+<dialog id="profile-dialog" aria-labelledby="dialog-title">
+  <form method="dialog">
+    <header>
+      <h2 id="dialog-title">Edit Profile</h2>
+      <button type="submit" value="cancel" aria-label="Close dialog">&times;</button>
+    </header>
+
+    <div class="dialog-body">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required minlength="3">
+
+      <label for="newsletter">
+        <input type="checkbox" id="newsletter" name="newsletter"> Subscribe to release alerts
+      </label>
+    </div>
+
+    <footer>
+      <button type="submit" value="cancel">Cancel</button>
+      <button type="submit" value="confirm" class="btn-primary">Save Changes</button>
+    </footer>
+  </form>
+</dialog>
+
+<style>
+  dialog {
+    border: none;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4);
+    background: #1e293b;
+    color: #f8fafc;
+    max-width: 450px;
+    width: 90%;
+  }
+
+  /* Native pseudo-element for background dimming */
+  dialog::backdrop {
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(6px);
+  }
+</style>
+
+<script>
+  const openBtn = document.getElementById('open-modal-btn');
+  const dialog = document.getElementById('profile-dialog');
+
+  // Open modal dialog (activates top layer + focus trap)
+  openBtn.addEventListener('click', () => {
+    dialog.showModal();
+  });
+
+  // Handle dialog submission or cancellation
+  dialog.addEventListener('close', () => {
+    console.log('Dialog closed with return value:', dialog.returnValue);
+  });
+</script>
+```
+
+---
+
+#### 2. Native Web Component: Autonomous Custom Element with Shadow DOM
+Encapsulates markup, isolated CSS, and reactive lifecycle without React or Vue:
+
+```html
+<user-card avatar="https://picsum.photos/100" name="Sarah Connor" role="Security Architect">
+  <p slot="bio">Defending systems against autonomous threat vectors.</p>
+</user-card>
+
+<script>
+  class UserCard extends HTMLElement {
+    constructor() {
+      super();
+      // Attach Shadow DOM for style and DOM isolation
+      this.attachShadow({ mode: 'open' });
+    }
+
+    static get observedAttributes() {
+      return ['avatar', 'name', 'role'];
+    }
+
+    attributeChangedCallback(name, oldValue, newValue) {
+      if (oldValue !== newValue) {
+        this.render();
+      }
+    }
+
+    connectedCallback() {
+      this.render();
+    }
+
+    render() {
+      const avatar = this.getAttribute('avatar') || 'https://via.placeholder.com/100';
+      const name = this.getAttribute('name') || 'Anonymous';
+      const role = this.getAttribute('role') || 'Member';
+
+      this.shadowRoot.innerHTML = `
+        <style>
+          :host {
+            display: inline-block;
+            font-family: system-ui, sans-serif;
+            background: #0f172a;
+            color: #f1f5f9;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 16px;
+            max-width: 320px;
+          }
+          .header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+          }
+          img {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #38bdf8;
+          }
+          h4 { margin: 0; font-size: 1.1rem; }
+          span { font-size: 0.85rem; color: #94a3b8; }
+          .bio { margin-top: 12px; font-size: 0.9rem; color: #cbd5e1; }
+        </style>
+
+        <div class="header">
+          <img src="${avatar}" alt="${name}'s avatar" loading="lazy">
+          <div>
+            <h4>${name}</h4>
+            <span>${role}</span>
+          </div>
+        </div>
+        <div class="bio">
+          <slot name="bio">Default bio description</slot>
+        </div>
+      `;
+    }
+  }
+
+  customElements.define('user-card', UserCard);
+</script>
+```
+
+---
+
+#### 3. Responsive `<picture>` Element with Next-Gen Formats & Art Direction
+Delivers optimal images by device pixel ratio, screen size, and modern format capability (AVIF -> WebP -> JPEG):
+
+```html
+<picture>
+  <!-- 1. Ultra-wide screens: Large landscape format in AVIF -->
+  <source media="(min-width: 1200px)" type="image/avif" srcset="hero-desktop-1200.avif 1x, hero-desktop-2400.avif 2x">
+  <source media="(min-width: 1200px)" type="image/webp" srcset="hero-desktop-1200.webp 1x, hero-desktop-2400.webp 2x">
+
+  <!-- 2. Tablets: Medium format -->
+  <source media="(min-width: 768px)" type="image/avif" srcset="hero-tablet-800.avif">
+  <source media="(min-width: 768px)" type="image/webp" srcset="hero-tablet-800.webp">
+
+  <!-- 3. Mobile phones: Art-directed tight crop in portrait orientation -->
+  <source media="(max-width: 767px)" type="image/avif" srcset="hero-mobile-crop.avif">
+  <source media="(max-width: 767px)" type="image/webp" srcset="hero-mobile-crop.webp">
+
+  <!-- 4. Universal Fallback img element (mandatory) -->
+  <img 
+    src="hero-fallback.jpg" 
+    alt="Platform overview dashboard with real-time analytics graphs"
+    width="1200" 
+    height="600" 
+    loading="eager" 
+    fetchpriority="high"
+    decoding="async"
+    class="hero-banner"
+  >
+</picture>
+```
+
+---
+
+#### 4. Semantic Accessibility & ARIA Accordion / Disclosure Pattern
+Screen-reader compliant keyboard accessible interactive disclosure:
+
+```html
+<div class="accordion-group">
+  <div class="accordion-item">
+    <h3>
+      <button 
+        type="button" 
+        id="accordion-header-1" 
+        aria-expanded="false" 
+        aria-controls="accordion-panel-1"
+        class="accordion-trigger"
+      >
+        <span>What is the difference between semantic HTML and generic divs?</span>
+        <span class="icon" aria-hidden="true">+</span>
+      </button>
+    </h3>
+    <div 
+      id="accordion-panel-1" 
+      role="region" 
+      aria-labelledby="accordion-header-1" 
+      hidden
+      class="accordion-content"
+    >
+      <p>
+        Semantic HTML tags (such as <code>&lt;header&gt;</code>, <code>&lt;article&gt;</code>, and <code>&lt;nav&gt;</code>) convey semantic meaning to screen readers and search engines, whereas <code>&lt;div&gt;</code> carries zero intrinsic meaning.
+      </p>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('.accordion-trigger').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+      const targetId = btn.getAttribute('aria-controls');
+      const panel = document.getElementById(targetId);
+
+      btn.setAttribute('aria-expanded', !isExpanded);
+      panel.hidden = isExpanded;
+    });
+  });
+</script>
+```
